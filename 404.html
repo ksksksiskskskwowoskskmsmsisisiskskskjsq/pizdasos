@@ -1,11 +1,43 @@
-<!DOCTYPE HTML>
-   <html>
-     <head>
-       <title>ezzel</title>
-       <style>
-body {
-  color: purple;
-}
-        </style>
-<center><b><h1>Soon...</h1></center></b>
-   </html>
+<!DOCTYPE html>
+<
+<html>
+<head>
+	<title>ezzel</title>
+	<style>
+     body {
+         font-family: Arial, sans-serif, Roboto;
+     }
+     #div {
+         height: 100vh;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-size: 100%;
+     }
+     h1,p {
+        animation-name: wow;
+        animation-duration: 4s;
+     }
+     @keyframes wow {
+       from {
+         opacity: 0%;
+       } 
+       to {
+         opacity: 100%;
+       }
+     }
+	</style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+	</script>
+	<script>
+	$.getJSON("https://api.ipify.org?format=json", function(data) {
+		$("#ip").html(data.ip);
+	})
+	</script>
+</head>
+<body>
+    <div id="div">
+		<h1 id="ip"></h1>
+    </div>
+</body>
+</html>
